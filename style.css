@@ -1,0 +1,103 @@
+:root {
+    --light-pink: rgb(255, 223, 228);
+    --dark-pink: #ff9aab;
+    --accent: #40798c; /*rgb(255, 121, 144);*/
+    --darker-pink: rgb(176, 87, 102);
+}
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#page-content {
+    background-color: pink;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 10vw 2vw var(--dark-pink);
+}
+.calculator {
+    font-size: 1.5rem;
+    background-color: var(--light-pink);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.2rem 1rem -0.5rem var(--darker-pink);
+}
+.calculator h3 {
+    color: var(--dark-pink);
+    text-shadow: 0 0 0.4em white;
+    text-align: center;
+    margin-top: 0;
+}
+.calculator .input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.calculator label {
+    color: var(--darker-pink);
+    margin: 0.5rem;
+}
+.calculator input {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5em;
+    border: 3px solid pink;
+    color: var(--dark-pink);
+    width: 6em;
+}
+.calculator input:focus-visible {
+    outline-color: var(--dark-pink);
+}
+/* Chrome, Safari, Edge, Opera */
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+
+/* Firefox */
+/* input[type=number] {
+  -moz-appearance: textfield;
+} */
+.calculator .button-row {
+    text-align: right;
+}
+.calculator .button-row button {
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    text-shadow: 0 -0.05em 0.3em var(--darker-pink);
+    font-weight: bold;
+    border: none;
+    border-color: pink;
+    background-color: var(--dark-pink);
+    transition: background-color 0.5s;
+}
+
+.calculator .button-row button:hover {
+    background-color: white;
+    text-shadow: none;
+    color: var(--dark-pink);
+}
+.calculator .button-row button:active {
+    color: var(--darker-pink);
+    background-color: pink;
+}
+
+#output {
+    text-align: center;
+    color: var(--darker-pink);
+    font-size: 2rem;
+    line-height: 1.5em;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#output.opaque {
+    opacity: 1;
+}
